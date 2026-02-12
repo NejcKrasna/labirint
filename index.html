@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Maze: The Void Sentinel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="lvlTxt">FLOOR 1</div>
+    <div class="canvas-container">
+        <canvas id="mazeCanvas"></canvas>
+        <div id="vignette"></div>
+        <div id="game-alert" class="hidden"></div>
+
+        <div id="enemy-popup" class="hidden">
+            <div class="popup-content">
+                <div id="enemy-art"></div>
+                <div class="popup-text">
+                    <h2 id="enemy-name"></h2>
+                    <p id="enemy-desc"></p>
+                    <button class="btn" onclick="closePopup()">I'M READY</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu">
+            <h2 id="death-reason">CAUGHT</h2>
+            <button class="btn" onclick="restart('floor')">RETRY FLOOR</button>
+            <button class="btn" onclick="restart('game')">NEW GAME</button>
+        </div>
+    </div>
+
+    <div class="stats-container">
+		<div class="stat-row"><span>LIGHT</span><div class="bar-bg"><div id="batt-bar" class="bar-fill"></div></div></div>
+		<div class="stat-row"><span>CLOAK</span><div class="bar-bg"><div id="cloak-bar" class="bar-fill"></div></div></div>
+		<div class="stat-row"><span>FREEZE</span><div class="bar-bg"><div id="freeze-bar" class="bar-fill"></div></div></div>
+		<div class="stat-row"><span>VOID</span><div class="bar-bg"><div id="blade-bar" class="bar-fill"></div></div></div>
+		<div class="stat-row"><span>ENEMY</span><div class="bar-bg"><div id="enemy-bar" class="bar-fill"></div></div></div>
+	</div>
+    <div class="hud">SHIFT: Freeze | SPACE: Pulse | E: Void Phase (Unlocked Lvl 6)</div>
+    <script src="script.js"></script>
+</body>
+</html>
